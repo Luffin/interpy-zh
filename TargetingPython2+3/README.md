@@ -54,7 +54,7 @@ except ImportError:
 ```
 
 让我来稍微解释一下上面的代码。  
-我们将模块导入代码包装在```try/except```语句中。我们是这样做是因为在Python 2中并没有```urllib.request```模块。这将引起一个```ImportError```异常。而在Python2中```urllib.request```的功能则是由```urllib2```提供的。所以,当我们试图在Python2中导入```urllib.request```模块的时候，一旦我们捕获到```ImportError```我们将通过导入```urllib2```模块来代替它。
+我们将模块导入代码包装在```try/except```语句中。我们这样做是因为在Python 2中并没有```urllib.request```模块。这将引起一个```ImportError```异常。而在Python2中```urllib.request```的功能则是由```urllib2```提供的。所以,当我们试图在Python2中导入```urllib.request```模块的时候，一旦我们捕获到```ImportError```我们将通过导入```urllib2```模块来代替它。
 
 最后，你要了解```as```关键字的作用。它将导入的模块映射到```urllib.request```，所以我们通过```urllib_request```这个别名就可以使用```urllib2```中的所有类和方法了。
 
